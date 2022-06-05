@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mobile Price Classification</title>
+</head>
+<body>
+<div class="login">
+    <h1>Predict prices for mobile</h1>
+        <h3>Enter the following values to predict the mobile price</h3>
+
+    <form action="{{url_for('predict')}}"method="POST">
+        <input type="text" name="batter_power" placeholder="Battery Power(500-2000)" required="required"/>
+        <input type="text" name="blue" placeholder="Blue (1 or 0)" required="required"/>
+        <input type="text" name="clock_speed" placeholder="Clock Speed(0.5-3.0)" required="required"/>
+        <input type="text" name="dual_sim" placeholder="Dual Sim (1 or 0)" required="required"/>
+        <input type="text" name="fc" placeholder="fc(0-19)" required="required"/>
+        <input type="text" name="four_g" placeholder="4g (1 or 0)" required="required"/>
+        <input type="text" name="int_memory" placeholder="Internal Memory(2-64)" required="required"/>
+        <input type="text" name="m_dep" placeholder="M Dep (0.1-1)" required="required"/>
+        <input type="text" name="mobile_wt" placeholder="Mobile Wattage(80-200)" required="required"/>
+        <input type="text" name="n_cores" placeholder="Cores (1-8)" required="required"/>
+        <input type="text" name="pc" placeholder="PC(0-20)" required="required"/>
+        <input type="text" name="px_height" placeholder="Phone Height(0-1907)" required="required"/>
+        <input type="text" name="px_width" placeholder="Phone Width(501-1998)" required="required"/>
+        <input type="text" name="ram" placeholder="RAM (263-3989)" required="required"/>
+        <input type="text" name="sc_h" placeholder="SC H(5-19)" required="required"/>
+        <input type="text" name="sc_w" placeholder="SC W (0-18)" required="required"/>
+        <input type="text" name="talk_time" placeholder="Talk Time(2-20)" required="required"/>
+        <input type="text" name="three_g" placeholder="3G (1 or 0)" required="required"/>
+        <input type="text" name="touch_screen" placeholder="Touch Screen(0 or 1)" required="required"/>
+        <input type="text" name="wifi" placeholder="Wifi(0 or 1)" required="required"/>
+
+        <button type="submit" class="btn">Predict</button>
+    </form>
+
+    <br>
+    <br>
+    {{ prediction_text }}
+
+</div>
+</body>
+</html>
